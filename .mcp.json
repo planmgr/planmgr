@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "pensil": {
+      "command": "npx",
+      "args": ["-y", "@pensil/mcp-server"],
+      "env": {
+        "PENSIL_API_KEY": "${PENSIL_API_KEY}"
+      }
+    }
+  }
+}

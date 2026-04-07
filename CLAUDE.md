@@ -8,7 +8,7 @@
 
 | 에이전트 | 역할 | 호출 시점 |
 |---|---|---|
-| `ux-creator` | 기획 + UX/UI 디자인 | 새 기능 기획, 화면 설계, 사용성 개선 |
+| `ux-creator` | 기획 + UX/UI 디자인 (**Pensil MCP** 사용) | 새 기능 기획, 화면 설계, 사용성 개선 |
 | `developer` | 프론트엔드(모바일) + 백엔드 구현 | 코드 작성, 버그 수정, 리팩토링 |
 | `infra` | 클라우드/CI-CD/배포 (선택적) | 서버, 인증, 푸시, 배포 자동화가 필요할 때만 |
 | `qa` | 검수, 테스트, 마켓 정책 점검 | 구현 완료 후, 릴리스 전 |
@@ -28,6 +28,17 @@
 - **마켓 정책 준수**: Apple App Store Review Guidelines, Google Play 정책을 항상 사전에 검토한다.
 - **인프라는 선택적**: 서비스 형태에 따라 인프라 없이도 동작 가능하면 굳이 도입하지 않는다.
 - **명세 기반**: 에이전트 간 협업은 `docs/` 하위 산출물을 기준으로 한다.
+- **디자인 SSOT는 Pensil**: 모든 디자인 산출물은 `ux-creator`가 Pensil MCP를 통해 생성·관리하며, `docs/design/`에는 Pensil 링크/ID를 기록한다.
+
+## MCP 서버 설정
+
+`.mcp.json`에 Pensil MCP 서버가 등록되어 있습니다. 사용 전 환경 변수 설정이 필요합니다:
+
+```bash
+export PENSIL_API_KEY=...   # Pensil 계정에서 발급
+```
+
+> ⚠️ `.mcp.json`의 `command`/`args`는 실제 Pensil MCP 패키지 이름에 맞게 조정해야 합니다.
 
 ## 디렉토리 규칙
 
